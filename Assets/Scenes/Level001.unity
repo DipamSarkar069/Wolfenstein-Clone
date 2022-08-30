@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 3588536}
   - component: {fileID: 3588535}
   - component: {fileID: 3588534}
-  m_Layer: 0
-  m_Name: Floor001 (2)
+  m_Layer: 6
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,8 +420,8 @@ GameObject:
   - component: {fileID: 90660026}
   - component: {fileID: 90660025}
   - component: {fileID: 90660024}
-  m_Layer: 0
-  m_Name: Floor001 (5)
+  m_Layer: 6
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,8 +627,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 379937652}
-  speed: 12
-  gravity: -19.8
+  groundCheck: {fileID: 952380161}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  speed: 10
+  gravity: -9.8
+  jumpHeight: 0.3
 --- !u!143 &379937652
 CharacterController:
   m_ObjectHideFlags: 0
@@ -660,6 +666,7 @@ Transform:
   m_Children:
   - {fileID: 1239515006}
   - {fileID: 400610787}
+  - {fileID: 952380161}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -675,8 +682,8 @@ GameObject:
   - component: {fileID: 398902433}
   - component: {fileID: 398902432}
   - component: {fileID: 398902431}
-  m_Layer: 0
-  m_Name: Floor001 (6)
+  m_Layer: 6
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -785,7 +792,7 @@ Transform:
   m_GameObject: {fileID: 400610786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.45, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 379937653}
   m_RootOrder: 1
@@ -946,8 +953,8 @@ GameObject:
   - component: {fileID: 534894902}
   - component: {fileID: 534894901}
   - component: {fileID: 534894900}
-  m_Layer: 0
-  m_Name: Floor001 (7)
+  m_Layer: 6
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1124,6 +1131,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &952380160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952380161}
+  m_Layer: 0
+  m_Name: Ground Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &952380161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952380160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.504, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 379937653}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1004190436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,8 +1173,8 @@ GameObject:
   - component: {fileID: 1004190439}
   - component: {fileID: 1004190438}
   - component: {fileID: 1004190437}
-  m_Layer: 0
-  m_Name: Floor001
+  m_Layer: 6
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1326,8 +1363,8 @@ GameObject:
   - component: {fileID: 1060876654}
   - component: {fileID: 1060876653}
   - component: {fileID: 1060876652}
-  m_Layer: 0
-  m_Name: Floor001 (3)
+  m_Layer: 6
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1600,7 +1637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ce0d6a65373a048845c09fdfef2b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 300
+  mouseSensitivity: 250
   playerBody: {fileID: 379937653}
 --- !u!1 &1416443465
 GameObject:
@@ -1614,8 +1651,8 @@ GameObject:
   - component: {fileID: 1416443468}
   - component: {fileID: 1416443467}
   - component: {fileID: 1416443466}
-  m_Layer: 0
-  m_Name: Floor001 (1)
+  m_Layer: 6
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1709,8 +1746,8 @@ GameObject:
   - component: {fileID: 1695016964}
   - component: {fileID: 1695016963}
   - component: {fileID: 1695016962}
-  m_Layer: 0
-  m_Name: Floor001 (4)
+  m_Layer: 6
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -606,6 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 379937653}
   - component: {fileID: 379937652}
+  - component: {fileID: 379937651}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -613,6 +614,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &379937651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379937650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439cea58c5f4ae94b9fc4d69459cf04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 379937652}
+  speed: 12
+  gravity: -19.8
 --- !u!143 &379937652
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1584,7 +1600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ce0d6a65373a048845c09fdfef2b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 300
   playerBody: {fileID: 379937653}
 --- !u!1 &1416443465
 GameObject:

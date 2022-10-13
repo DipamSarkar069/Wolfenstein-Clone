@@ -14,5 +14,6 @@ public class HandgunAmmoPickup : MonoBehaviour
         fakeAmmo.SetActive(false);
         AmmoPickup.Play();
         GlobalAmmoCount.maxAmmo += 10;
+        
     }
 }

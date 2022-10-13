@@ -13,5 +13,6 @@ public class HandGunPickup : MonoBehaviour
         realHandGun.SetActive(true);
         fakeHandGun.SetActive(false);
         GunPickup.Play();
+        GetComponent<BoxCollider>().enabled = false;
     }
 }

@@ -40,6 +40,7 @@ public class SoldierAI : MonoBehaviour
         soldier.GetComponent<Animator>().Play("demo_combat_shoot");
         enemyFire.Play();
         lookingAtPlayer = true;
+        GlobalHealth.healthValue -= 5;
         yield return new WaitForSeconds(fireRate);
         isFiring = false;
 
